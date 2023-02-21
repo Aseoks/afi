@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Parisienne&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-font: "Montserrat", sans-serif;
+  --decoration-font: "Parisienne", cursive;
+}
+
+body {
+  font-family: var(--main-font);
+  background-image: url("backgroundimage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;  
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 3rem 0 3rem;
+}
+
+.menu-section {
+  display: flex;
+  cursor: pointer;
+}
+
+.menu {
+  font-size: 2em;
+}
+
+.hamburger-icon {
+  margin-left: 15px;
+}
+
+.hamburger-line {
+  width: 56px;
+  padding-top: 15px;
+  border-bottom: 2.5px solid white;
+}
+
+.hamburger-line:nth-child(2) {
+  width: 42px;
+}
+
+.links {
+  width: 20vw;
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.list-link {
+  text-decoration: none;
+  color: white;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
+  margin-top: 7rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.quote {
+  line-height: 30px;
+  margin-top: 2em;
+}
+
+.quote:nth-child(2) {
+  padding-left: 150px;
+}
+
+.decoration-text {
+  font-family: var(--decoration-font);
+  font-size: 7rem;
+  text-transform: lowercase;
+  padding-left: 9rem;
+}
+
+.change {
+  padding-left: 5.5rem;
+}
+
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
