@@ -8,12 +8,27 @@
   --decoration-font: "Parisienne", cursive;
 }
 
-body {
+/* body{
+  overflow: hidden;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-page {
+  position: relative;
   font-family: var(--main-font);
   background-image: url("backgroundimage.png");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;  
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .navigation {
@@ -23,17 +38,31 @@ body {
   margin: 2rem 3rem 0 3rem;
 }
 
+@media only screen and (min-width: 1800px) {
+  .navigation {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .menu-section {
   display: flex;
   cursor: pointer;
 }
+
+/* .list-item:hover{
+  background-color: #fff;
+} */
 
 .menu {
   font-size: 2em;
 }
 
 .hamburger-icon {
+  position: relative;
   margin-left: 15px;
+  z-index: 11;
 }
 
 .hamburger-line {
@@ -46,18 +75,91 @@ body {
   width: 42px;
 }
 
+#navigation-menu {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-image: url("backgroundimage.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(112, 95, 72, 0.95);
+  background-blend-mode: screen;
+  z-index: 1;
+  text-align: center;
+  display: none;
+}
+
+
+
+.list {
+  position: relative;
+  z-index: 8;
+  margin: 5em auto;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3em;
+  line-height: 1.2em;
+}
+
+.list-item { 
+  width: 100%;
+  color: black;
+  cursor: pointer;
+}
+
+
+
+.list-link{
+  position: absolute;
+  z-index: 10;
+  text-decoration: none;
+  color: black;
+}
+
+.list-link:hover { 
+  text-decoration: none;
+  color: black;
+ }
+
+#selected-item {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  font-size: 20rem;
+  text-transform: uppercase;
+
+}
+
+@media only screen and (max-width: 376px) {
+  .list {
+    margin: 3em auto;
+  }
+  .selected-item {
+    display: none;
+  }
+}
+
 .links {
   width: 20vw;
   height: 100%;
 }
 
-.list {
+.list-contact {
   display: flex;
   justify-content: space-around;
   list-style: none;
 }
 
-.list-link {
+.list-contact-link {
   text-decoration: none;
   color: white;
 }
@@ -92,6 +194,113 @@ body {
   padding-left: 5.5rem;
 }
 
+.form {
+  position: fixed;
+  bottom: 5em;
+  right: 5em;
+  width: 23em;
+  height: 28em;
+  background-color: rgba(217, 217, 217, 0.6);
+  border-radius: 1em;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.dates,
+.value {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.5em;
+}
+
+@media only screen and (max-width: 980px) {
+  .form {
+    position: inherit;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  .dates,
+  .values {
+    display: none;
+  }
+}
+
+.dateContainer,
+.valueContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+.dateContainer:nth-child(1),
+.valueContainer:nth-child(1) {
+  margin-right: 1em;
+}
+
+.dateContainer:nth-child(2),
+.valueContainer:nth-child(2) {
+  margin-left: 1em;
+}
+
+/* .date-card{
+  height: 8em;
+  width: 100%;
+  position: absolute;
+  background-color: red;
+} */
+
+.valueContainer {
+  align-items: flex-start;
+}
+
+.datePicker::-webkit-datetime-edit-month-field {
+  color: blue;
+}
+
+.datePicker {
+  height: 8em;
+  width: 100%;
+  margin: 2em 0;
+}
+
+.datekPickerBox {
+  height: 100%;
+  background-color: green;
+}
+
+.valuePicker {
+  height: auto;
+  width: 100%;
+  margin: 1em 0;
+  text-align: center;
+}
+
+#submit {
+  width: 100%;
+  height: 3em;
+  font-size: 1.2em;
+  margin-top: 1em;
+  position: relative;
+  color: white;
+  background-color: #1e3440;
+  border: none;
+  transition: 0.6s;
+}
+
+#submit:hover {
+  background-color: #6b94a8;
+}
+
 .scroll-down {
   display: flex;
   justify-content: center;
@@ -102,4 +311,11 @@ body {
   margin: 0 auto;
   margin-bottom: 1em;
   cursor: pointer;
+}
+
+.second-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
 }
