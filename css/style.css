@@ -23,7 +23,7 @@ html {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(black, 0.2);
   background-blend-mode: multiply;
   color: white;
   height: 100vh;
@@ -32,47 +32,47 @@ html {
 }
 
 .navigation {
+  max-width: 1600px;
+  margin: 0 10% 0 10%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 2rem 3rem 0 3rem;
-}
-
-@media only screen and (min-width: 1800px) {
-  .navigation {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  align-items: baseline;
+  text-align: center;
 }
 
 .menu-section {
   display: flex;
   cursor: pointer;
+  align-items: center;
 }
-
-/* .list-item:hover{
-  background-color: #fff;
-} */
 
 .menu {
   font-size: 2em;
 }
 
-.hamburger-icon {
-  position: relative;
-  margin-left: 15px;
-  z-index: 11;
+.button-three {
+  --button-color: white;
+  overflow: hidden;
+  z-index: 100;
 }
 
-.hamburger-line {
-  width: 56px;
-  padding-top: 15px;
-  border-bottom: 2.5px solid white;
+.button-three .hamburger {
+  transition: translate 1s, rotate 1s;
 }
 
-.hamburger-line:nth-child(2) {
-  width: 42px;
+.button-three[aria-expanded="true"] .hamburger {
+  translate: 10px -10px;
+  rotate: 0.125turn;
+}
+
+.button-three .line {
+  stroke-dasharray: 60 53 38 1000;
+  transition: 1s;
+}
+
+.button-three[aria-expanded="true"] .line {
+  stroke-dasharray: 60 105 60 1000;
+  stroke-dashoffset: -90;
 }
 
 #navigation-menu {
@@ -80,48 +80,44 @@ html {
   width: 100%;
   position: absolute;
   top: 0;
+  left: 0;
   background-image: url("backgroundimage.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(112, 95, 72, 0.95);
-  background-blend-mode: screen;
-  z-index: 1;
-  text-align: center;
+  background-color: #dac28e;
+  z-index: 3;
+  margin: auto;
+  transition: 1.2s;
   display: none;
 }
 
-
-
 .list {
-  position: relative;
-  z-index: 8;
-  margin: 5em auto;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   font-size: 3em;
   line-height: 1.2em;
+  text-align: center;
+  list-style: none;
 }
 
-.list-item { 
+.list-item {
   width: 100%;
-  color: black;
   cursor: pointer;
 }
 
-
-
-.list-link{
-  position: absolute;
-  z-index: 10;
+.list-link {
   text-decoration: none;
   color: black;
 }
 
-.list-link:hover { 
+.list-link:hover {
   text-decoration: none;
   color: black;
- }
+}
 
 #selected-item {
   position: absolute;
@@ -133,17 +129,18 @@ html {
   z-index: -1;
   width: 100%;
   height: 100vh;
-  color: black;
-  font-size: 20rem;
+  font-size: 20em;
   text-transform: uppercase;
-
+  opacity: 0.1;
+  color: black;
+  line-height: 20em;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 450px) {
   .list {
     margin: 3em auto;
   }
-  .selected-item {
+  #selected-item {
     display: none;
   }
 }
@@ -155,13 +152,18 @@ html {
 
 .list-contact {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  gap: 2em;
   list-style: none;
 }
 
 .list-contact-link {
   text-decoration: none;
   color: white;
+}
+
+.list-contact-link:hover {
+  color: #1e3440;
 }
 
 .title {
@@ -172,6 +174,7 @@ html {
   margin-top: 7rem;
   text-transform: uppercase;
   user-select: none;
+  padding-right: 10em;
 }
 
 .quote {
@@ -195,16 +198,17 @@ html {
 }
 
 .form {
-  position: fixed;
+  position: absolute;
   bottom: 5em;
-  right: 5em;
+  right: 10%;
   width: 23em;
-  height: 28em;
+  height: auto;
   background-color: rgba(217, 217, 217, 0.6);
   border-radius: 1em;
   padding: 1em 2em;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .dates,
@@ -214,22 +218,66 @@ html {
   padding-top: 0.5em;
 }
 
+.value {
+  margin-top: 1em;
+}
+
 @media only screen and (max-width: 980px) {
   .form {
-    position: inherit;
+    position: absolute;
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 4rem;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: row;
     margin: 0 auto;
     border-radius: 0;
+    z-index: 3;
   }
 
-  .dates,
-  .values {
-    display: none;
+  .list-contact-item {
+    font-size: 0.8em;
+    padding: 0 0.5em;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+    margin-top: 7rem;
+    text-transform: uppercase;
+    user-select: none;
+    padding-right: 2em;
+  }
+
+  .quote {
+    margin-left: 50px;
+  }
+
+  .quote:nth-child(2) {
+    margin-top: 1em;
+    padding-left: 25px;
+  }
+
+  .decoration-text {
+    font-family: var(--decoration-font);
+    font-size: 4rem;
+    text-transform: lowercase;
+    padding-left: 10rem;
+  }
+
+  .change {
+    padding-left: 7rem;
+  }
+
+  .list-contact {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    list-style: none;
   }
 }
 
@@ -237,7 +285,6 @@ html {
 .valueContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 50%;
   text-transform: uppercase;
 }
@@ -263,26 +310,15 @@ html {
   align-items: flex-start;
 }
 
-.datePicker::-webkit-datetime-edit-month-field {
-  color: blue;
-}
-
 .datePicker {
-  height: 8em;
-  width: 100%;
-  margin: 2em 0;
-}
-
-.datekPickerBox {
-  height: 100%;
-  background-color: green;
+  text-align: center;
 }
 
 .valuePicker {
   height: auto;
   width: 100%;
-  margin: 1em 0;
-  text-align: center;
+  margin: 0;
+  text-align: right;
 }
 
 #submit {
@@ -303,14 +339,27 @@ html {
 
 .scroll-down {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: auto;
   margin: 0 auto;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   cursor: pointer;
+}
+
+#scroll-to {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scroll-to:hover {
+  text-decoration: none;
 }
 
 .second-screen {
@@ -318,4 +367,96 @@ html {
   width: 100%;
   height: 100vh;
   background-color: black;
+  display: flex;
+  justify-items: center;
+}
+
+.half {
+  width: 50%;
+  color: white;  
+}
+
+.left {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+}
+
+.right {
+  margin-right: 10%;
+  margin-top: 0;
+}
+
+.section-title {
+  color: #dac28e;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.spacer {
+  height: 1px;
+  width: 140px;
+  background-color: #dac28e;
+  margin-bottom: 1em;
+}
+
+.spacer-media {
+  display: none;
+}
+
+.section-description {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 1100px) {
+  .spacer {
+    height: 1px;
+    width: 200px;
+    background-color: #dac28e;
+    margin-bottom: 1em;
+  }
+
+  .spacer-media {
+    height: 1px;
+    width: 110px;
+    background-color: #dac28e;
+    margin-bottom: 0;
+    display: block;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .left{
+    width: 100%;
+    margin: 0 auto;
+    padding: 5em 2em;
+  }
+  
+}
+
+.right {
+  background-image: url(./imageSectionTwo.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(black, 0.2);
+  margin-left: 10em;
+  -webkit-box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
+  box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
+}
+
+.third-screen {
+  color: white;
+  background-color: black;
+  height: auto;
+  text-align: center;
+  font-size: 4em;
+  font-family: var(--decoration-font);
+  font-weight: lighter;
 }

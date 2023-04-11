@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,39 +19,73 @@
       <nav class="navigation">
         <div class="menu-section" id="menu-show">
           <div class="menu">Menu</div>
-          <div class="hamburger-icon">
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
+          <div class="button-three">
+            <svg
+              stroke="var(--button-color)"
+              fill="none"
+              class="hamburger"
+              viewBox="-10 -10 120 120"
+              width="85"
+            >
+              <path
+                class="line"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+              ></path>
+            </svg>
           </div>
         </div>
-        
 
         <div class="links">
           <ul class="list-contact">
-            <li class="list-contact-item"><a href="#" class="list-contact-link">Phone</a></li>
-            <li class="ist-contact-item"><a href="#" class="list-contact-link">E-mail</a></li>
-            <li class="ist-contact-item"><a href="#" class="list-contact-link">Instagram</a>
+            <li class="list-contact-item">
+              <a href="#" class="list-contact-link"
+                ><i class="fa-sharp fa-solid fa-phone-flip fa-xl"></i
+              ></a>
+            </li>
+            <li class="list-contact-item">
+              <a href="#" class="list-contact-link"
+                ><i class="fa-solid fa-envelope fa-xl"></i
+              ></a>
+            </li>
+            <li class="list-contact-item">
+              <a href="#" class="list-contact-link"
+                ><i class="fa-brands fa-instagram fa-xl"></i
+              ></a>
             </li>
           </ul>
         </div>
       </nav>
-      
-      <div id="navigation-menu">        
-       
-          <ul class="list">        
-            <li class="list-item" id="1"><a href="#" class="list-link">Home</a></li>
-            <li class="list-item" id="2"><a href="#" class="list-link">About us</a></li>
-            <li class="list-item" id="3"><a href="#" class="list-link">Hostel</a></li>
-            <li class="list-item" id="4"><a href="#" class="list-link">Rooms</a></li>
-            <li class="list-item" id="5"><a href="#" class="list-link">Charities</a></li>
-            <li class="list-item" id="6"><a href="#" class="list-link">Location</a></li>
-            <li class="list-item" id="7"><a href="#" class="list-link">Contact</a></li>
-            
+
+      <div id="navigation-menu">
+        <ul class="list">
+          <li class="list-item" id="1">
+            <a href="#" class="list-link">Home</a>
+          </li>
+          <li class="list-item" id="2">
+            <a href="#" class="list-link">About us</a>
+          </li>
+          <li class="list-item" id="3">
+            <a href="#" class="list-link">Hostel</a>
+          </li>
+          <li class="list-item" id="4">
+            <a href="#" class="list-link">Rooms</a>
+          </li>
+          <li class="list-item" id="5">
+            <a href="#" class="list-link">Charities</a>
+          </li>
+          <li class="list-item" id="6">
+            <a href="#" class="list-link">Location</a>
+          </li>
+          <li class="list-item" id="7">
+            <a href="#" class="list-link">Contact</a>
+          </li>
         </ul>
-        <div id="selected-item">123123123123</div>  
+        <div id="selected-item"></div>
       </div>
-      
-      
+
       <div class="title">
         <p class="quote">
           Live your <br /><span class="decoration-text">dream</span>
@@ -67,42 +97,125 @@
       <div class="form">
         <form action="#">
           <div class="dates">
-            <div class="dateContainer">              
-              <label for="arrival">Arrival</label>              
-              <input type="date" class="datePicker" id="arrival" value="arrivalDate">  
-                    
+            <div class="dateContainer">
+              <label for="arrival">Arrival</label>
+              <input
+                type="date"
+                class="datePicker"
+                id="arrival"
+                value="arrivalDate"
+              />
             </div>
-            
-            <div class="dateContainer">              
-              <label for="departure">Departure</label>              
-              <input type="date" class="datePicker" id="departure" value="departureDate">                            
+
+            <div class="dateContainer">
+              <label for="departure">Departure</label>
+              <input
+                type="date"
+                class="datePicker"
+                id="departure"
+                value="departureDate"
+              />
             </div>
-            
           </div>
 
           <div class="value">
             <div class="valueContainer">
               <label for="guests">Guests:</label>
-              <input type="number" class="valuePicker" id="guests" value="guestsNumber" min="1" max="12">              
+              <input
+                type="number"
+                class="valuePicker"
+                id="guests"
+                value="guestsNumber"
+                min="1"
+                max="12"
+              />
             </div>
-            
+
             <div class="valueContainer">
               <label for="pets">Pets:</label>
-              <input type="number" class="valuePicker" id="pets" value="petsNumber" min="0" max="2">
+              <input
+                type="number"
+                class="valuePicker"
+                id="pets"
+                value="petsNumber"
+                min="0"
+                max="2"
+              />
             </div>
-            
           </div>
 
           <button id="submit">BOOK NOW</button>
-          
-
         </form>
       </div>
-      <div class="scroll-down"><p>Discover more</p></div>
+      <div class="scroll-down">
+        <a id="scroll-to" href="#scroll-to-second"
+          ><p>Discover more</p>
+          <i class="fa-solid fa-chevron-down fa-lg"></i
+        ></a>
+      </div>
     </section>
 
-    <section class="second-screen"><div>124</div></section>
+    <section class="second-screen" id="scroll-to-second">
+      <div class="half left">
+        <h2 class="section-title">
+          Our
+          <div class="spacer-media"></div>
+          mission
+        </h2>
+        <div class="spacer"></div>
+        <p class="section-description">
+          Provide affordable, sustainable and meaningful travel opportunities,
+          while promoting pet-friendly sustainable travel and empowering active,
+          respectful and caring people in their goal to support our planet and
+          all the beautiful things within it
+        </p>
+      </div>
+      <div class="half right"></div>
+    </section>
 
+    <section class="third-screen"><p>for</p></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/da95deaf60.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js"></script>
   </body>
 </html>
