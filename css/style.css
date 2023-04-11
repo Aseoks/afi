@@ -163,7 +163,7 @@ html {
 }
 
 .list-contact-link:hover {
-  color: #1e3440;
+  color: #6b94a8;
 }
 
 .title {
@@ -174,7 +174,6 @@ html {
   margin-top: 7rem;
   text-transform: uppercase;
   user-select: none;
-  padding-right: 10em;
 }
 
 .quote {
@@ -362,18 +361,20 @@ html {
   text-decoration: none;
 }
 
-.second-screen {
+.second-screen,
+.four-screen {
   position: relative;
   width: 100%;
   height: 100vh;
   background-color: black;
   display: flex;
   justify-items: center;
+  align-items: baseline;
 }
 
 .half {
   width: 50%;
-  color: white;  
+  color: white;
 }
 
 .left {
@@ -411,7 +412,84 @@ html {
   font-weight: 300;
 }
 
+.right-second {
+  background-image: url(./imageSectionTwo.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(black, 0.2);
+  margin-left: 10em;
+  height: 50em;
+  -webkit-box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
+  box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
+}
+
+.photo-text {
+  text-transform: uppercase;
+  font-size: 10em;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.25);
+  position: relative;
+  top: 20rem;
+  right: 6rem;
+  line-height: 11rem;
+}
+
+.third-screen {
+  color: white;
+  background-color: black;
+  height: 2em;
+  text-align: center;
+  font-size: 4em;
+  font-family: var(--decoration-font);
+  font-weight: lighter;
+  padding-bottom: 3em;
+}
+
+
+
+.photo-text-four {
+  text-align: end;
+  position: relative;
+  top: 20rem;
+  left: 6rem;
+}
+
+.left-four {
+  background-image: url(./iamgeSectionFour.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(black, 0.2);
+  margin-right: 10em;
+  height: 50em;
+  -webkit-box-shadow: inset 48px 0px 15px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 48px 0px 15px -7px rgba(0, 0, 0, 1);
+  box-shadow: inset 48px 0px 15px -7px rgba(0, 0, 0, 1);
+}
+
+
+
+.fifth-screen {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 0 2em 5em 2em;
+}
+
+
+
 @media only screen and (max-width: 1100px) {
+  .second-screen,
+  .four-screen {
+    height: 100%;
+  }
+
+
+
   .spacer {
     height: 1px;
     width: 200px;
@@ -427,36 +505,36 @@ html {
     display: block;
   }
 
-  .right {
+  .right-second {
     display: none;
   }
 
-  .left{
+  .left,
+  .right {
     width: 100%;
     margin: 0 auto;
     padding: 5em 2em;
   }
+
+  .left-four {
+    display: none;
+  }
+
+  .third-screen {
+    display: none;
+  }
+
+  .fithf-screen {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding-bottom: 0;   
+  }
+
+  .videoWrapper{
+    display: none;
+  }
   
-}
-
-.right {
-  background-image: url(./imageSectionTwo.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: rgba(black, 0.2);
-  margin-left: 10em;
-  -webkit-box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
-  -moz-box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
-  box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
-}
-
-.third-screen {
-  color: white;
-  background-color: black;
-  height: auto;
-  text-align: center;
-  font-size: 4em;
-  font-family: var(--decoration-font);
-  font-weight: lighter;
 }
