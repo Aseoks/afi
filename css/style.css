@@ -196,18 +196,59 @@ html {
   padding-left: 5.5rem;
 }
 
-.form {
+.widgets{
+  display: flex;
+  flex-direction: column;;
   position: absolute;
   bottom: 5em;
   right: 10%;
   width: 23em;
+  z-index: 2;
+  font-family: var(--main-font);
+}
+
+.weather-widget{
+  height: auto;
+  background-color: rgba(217, 217, 217, 0.6);
+  border-radius: 1em;
+  padding: 1em 1.5em;
+  margin-bottom: 2em;  
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.weather-left, .weather-right{
+  width: 50%;
+}
+
+.weather-left{
+  padding-right: 1em; 
+}
+
+.weather-right{
+  padding-left: 1em;  
+}
+
+.weather-right h4{
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+
+.weather-right span{
+  text-decoration: underline;
+}
+
+.weather-title{
+  font-size: 1.5em;
+}
+
+.form {   
   height: auto;
   background-color: rgba(217, 217, 217, 0.6);
   border-radius: 1em;
   padding: 1em 2em;
   display: flex;
-  justify-content: center;
-  z-index: 2;
+  justify-content: center;  
 }
 
 .dates,
@@ -222,18 +263,31 @@ html {
 }
 
 @media only screen and (max-width: 980px) {
-  .form {
+
+  .widgets{
     position: absolute;
     bottom: 0;
     right: 0;
     width: 100%;
+    z-index: 3;
+  }
+
+  .weather-widget{
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0.75em;        
+  }
+
+  .form {    
     height: auto;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: row;
     margin: 0 auto;
     border-radius: 0;
-    z-index: 3;
+    width: 100%;
   }
 
   .list-contact-item {
@@ -462,11 +516,19 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(black, 0.2);
-  margin-right: 10em;
+  margin-left: 10em;
   height: 50em;
   -webkit-box-shadow: inset 48px 0px 15px -7px rgba(0, 0, 0, 1);
   -moz-box-shadow: inset 48px 0px 15px -7px rgba(0, 0, 0, 1);
   box-shadow: inset 48px 0px 15px -7px rgba(0, 0, 0, 1);
+}
+
+.right-four{
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+  margin-left: 7em;
 }
 
 
@@ -518,6 +580,12 @@ html {
 
   .left-four {
     display: none;
+  }
+
+  .right-four {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5em 2em;
   }
 
   .third-screen {
