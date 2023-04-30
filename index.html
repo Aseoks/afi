@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adventure for impact</title>
+    <title>Adventure For Impact</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -19,7 +19,7 @@
       <nav class="navigation">
         <div class="menu-section" id="menu-show">
           <div class="menu">Menu</div>
-          <div class="button-three">
+          <div class="button-three" aria-expanded="false">
             <svg
               stroke="var(--button-color)"
               fill="none"
@@ -46,7 +46,7 @@
               ></a>
             </li>
             <li class="list-contact-item">
-              <a href="#" class="list-contact-link"
+              <a href="#contact-form-div" class="list-contact-link"
                 ><i class="fa-solid fa-envelope fa-xl"></i
               ></a>
             </li>
@@ -65,22 +65,22 @@
             <a href="#" class="list-link">Home</a>
           </li>
           <li class="list-item" id="2">
-            <a href="#" class="list-link">About us</a>
+            <a href="AboutUs.html" class="list-link">About us</a>
           </li>
           <li class="list-item" id="3">
             <a href="#" class="list-link">Hostel</a>
           </li>
           <li class="list-item" id="4">
-            <a href="#" class="list-link">Rooms</a>
+            <a href="Rooms.html" class="list-link">Rooms</a>
           </li>
           <li class="list-item" id="5">
             <a href="#" class="list-link">Charities</a>
           </li>
           <li class="list-item" id="6">
-            <a href="#" class="list-link">Location</a>
+            <a href="#location-div" class="list-link" id="location"">Location</a>
           </li>
           <li class="list-item" id="7">
-            <a href="#" class="list-link">Contact</a>
+            <a href="#contact-form-div" class="list-link" id="contact">Contact</a>
           </li>
         </ul>
         <div id="selected-item"></div>
@@ -102,13 +102,15 @@
             <h4 class="temperature">24 &deg;C</h4>
           </div>
           <div class="weather-right">
-            <h4 class="wind-speed"> <span>wind: </span>10 km/h</h4>
+            <h4 class="wind-speed"><span>wind: </span>10 km/h</h4>
             <h4 class="humidity"><span>humidity: </span>60%</h4>
             <h4 class="weather-description">Cloudy</h4>
           </div>
         </div>
+
+        <!-- form -->
         <div class="form">
-          <form action="#">
+          <form action="#" id="form">
             <div class="dates">
               <div class="dateContainer">
                 <label for="arrival">Arrival</label>
@@ -117,7 +119,9 @@
                   class="datePicker"
                   id="arrival"
                   value="arrivalDate"
+                  min="2023-05-02"
                 />
+                <div class="error" id="errorArrival"></div>
               </div>
 
               <div class="dateContainer">
@@ -127,7 +131,9 @@
                   class="datePicker"
                   id="departure"
                   value="departureDate"
+                  min="2023-05-02"
                 />
+                <div class="error" id="errorDeparture"></div>
               </div>
             </div>
 
@@ -140,8 +146,9 @@
                   id="guests"
                   value="guestsNumber"
                   min="1"
-                  max="12"
+                  max="6"
                 />
+                <div class="error" id="errorGuests"></div>
               </div>
 
               <div class="valueContainer">
@@ -155,12 +162,15 @@
                   max="2"
                 />
               </div>
-            </div>
-
-            <button id="submit">BOOK NOW</button>
+            </div>                  
+              <button id="submit">BOOK NOW</button>                  
           </form>
         </div>
+        <button class="show-book" aria-expanded="false">
+          Check avaliablity
+        </button>
       </div>
+
       <div class="scroll-down">
         <a id="scroll-to" href="#scroll-to-second"
           ><p>Discover more</p>
@@ -239,7 +249,38 @@
       </div>
     </section>
 
-    <section class="sixth-screen"><div class="contact-form"></div></section>
+    <section class="sixth-screen">
+      <div id="contact-form-div" class="contact-form half">
+        <form class="contact-form-form" action="#">
+          <h3 class="contact-form-title">Contact us</h3>
+          <div class="contact-inputs">
+            <div class="contact-name">
+              <label class="name" for="name">Name:</label>
+              <input type="text" placeholder="Your name" id="name" />
+            </div>
+            <div class="contact-email">
+              <label class="email" for="email">Email:</label>
+              <input type="email" placeholder="Your e-mail" id="email" />
+            </div>
+          </div>
+          <textarea class="contact-msg" placeholder="Your message"></textarea>
+          <button id="submit-contact">Send</button>
+        </form>
+      </div>
+      <div class="half location" id="location-div">
+        <div class="map-responsive">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86607.33547332369!2d11.308750250339754!3d47.28543371353053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479d6ecfe1f8ca73%3A0x9d201c7d281d9b0d!2sInnsbruck%2C%20Austria!5e0!3m2!1spl!2spl!4v1682684814716!5m2!1spl!2spl"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
@@ -260,6 +301,6 @@
       src="https://kit.fontawesome.com/da95deaf60.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="/javaScript/index.js"></script>
   </body>
 </html>

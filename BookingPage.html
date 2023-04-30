@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Room</title>
+    <link rel="stylesheet" href="css/bookingPage.css" />
+  </head>
+  <body>
+    <section class="main-page">
+      <div class="main-container">
+        <nav class="navigation">
+          <div class="menu-section" id="menu-show">
+            <div class="menu">Menu</div>
+            <div class="button-three" aria-expanded="false">
+              <svg
+                stroke="var(--button-color)"
+                fill="none"
+                class="hamburger"
+                viewBox="-10 -10 120 120"
+                width="85"
+              >
+                <path
+                  class="line"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="links">
+            <ul class="list-contact">
+              <li class="list-contact-item">
+                <a href="#" class="list-contact-link"
+                  ><i class="fa-sharp fa-solid fa-phone-flip fa-xl"></i
+                ></a>
+              </li>
+              <li class="list-contact-item">
+                <a href="#contact-form-div" class="list-contact-link"
+                  ><i class="fa-solid fa-envelope fa-xl"></i
+                ></a>
+              </li>
+              <li class="list-contact-item">
+                <a href="#" class="list-contact-link"
+                  ><i class="fa-brands fa-instagram fa-xl"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div id="navigation-menu">
+          <ul class="list">
+            <li class="list-item" id="1">
+              <a href="index.html" class="list-link">Home</a>
+            </li>
+            <li class="list-item" id="2">
+              <a href="AboutUs.html" class="list-link">About us</a>
+            </li>
+            <li class="list-item" id="3">
+              <a href="#" class="list-link">Hostel</a>
+            </li>
+            <li class="list-item" id="4">
+              <a href="#" class="list-link">Rooms</a>
+            </li>
+            <li class="list-item" id="5">
+              <a href="#" class="list-link">Charities</a>
+            </li>
+            <li class="list-item" id="6">
+              <a href="index.html#location-div" class="list-link">Location</a>
+            </li>
+            <li class="list-item" id="7">
+              <a href="#" class="list-link">Contact</a>
+            </li>
+          </ul>
+          <div id="selected-item"></div>
+        </div>
+        <div class="half half-text">
+          <form action="#" id="booking-room-form">
+            <div class="form-container">
+              <div class="form-title">Book This Room:</div>
+              <div class="form-date-picker">
+                <!-- Arrival -->
+                <div class="arrival form-box">
+                  <label
+                    class="form-label"
+                    for="arrival-date-picker"
+                    id="arrival-date"
+                    name="arriaval"
+                    >Arrival:</label
+                  >
+                  <div class="error-box">
+                    <input type="date" id="arrival-date-picker" class="arrival-input" />
+                    <div class="error"></div>
+                  </div>
+                </div>
+                <!-- Departure -->
+                <div class="departure form-box ">
+                  <label
+                    class="form-label "
+                    for="departure-date-picker"
+                    id="departure-date"
+                    name="departure"
+                    >Departure:</label
+                  >
+                  <div class="error-box">
+                    <input type="date" id="departure-date-picker"/>
+                    <div class="error"></div>
+                  </div>
+                </div>
+                
+              </div>
+              <!-- Guests -->
+              <div class="form-guest-picker">
+                <div class="guests form-box">
+                  <label
+                    class="form-label"
+                    for="guests-picker"
+                    id="guests-number"
+                    name="guests"
+                    >Guests:</label
+                  >
+                  <div class="error-box">
+                    <input
+                      type="number"
+                      id="guests-picker"
+                      class="guest-error"
+                      min="1"
+                      max="5"
+                      placeholder="1"
+                    />
+                    <div class="error"></div>
+                  </div>
+                </div>
+                <div class="pets form-box">
+                  <label
+                    class="form-label"
+                    for="pets-picker"
+                    id="pets-number"
+                    name="pets"
+                    >Pets:</label
+                  >
+                  <div class="error-box">
+                    <input
+                      type="number"
+                      id="pets-picker"
+                      min="0"
+                      max="2"
+                      placeholder="0"
+                    />
+                    <div class="error"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- email -->
+              <div class="form-email form-box">
+                <label
+                  class="form-label"
+                  for="email"
+                  id="email-label"
+                  name="your-email"
+                  >Your e-mail:</label
+                >
+                <div class="error-box">
+                  <input
+                    type="email"
+                    id="email"
+                    class="email-error"
+                    placeholder="email@email.com"
+                  />
+                  <div class="error"></div>
+                </div>
+              </div>
+              <!-- Details -->
+              <div class="form-your-details">
+                <div class="your-name form-box">
+                  <label
+                    class="form-label"
+                    for="first-name"
+                    id="first-name-label"
+                    name="your-first-name"
+                    >Your name:</label
+                  >
+                  <div class="error-box"><input type="text" id="first-name" placeholder="Jhon" />
+                    <div class="error">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="your-surname form-box">
+                  <label
+                    class="form-label"
+                    for="last-name"
+                    id="last-name-label"
+                    name="your-last-name"
+                    >Your last name:</label
+                  >
+                  <div class="error-box">
+                    <input type="text" id="last-name" placeholder="Cowalski" />
+                    <div class="error"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Button -->
+              <button id="form-submit">Book</button>
+            </div>
+          </form>
+        </div>
+        <div class="half half-image"></div>
+      </div>
+    </section>
+
+    <section class="section-second admin-dashboard">
+      <div class="table-wrapper">
+        <div class="table-container">
+          <table id="main-table" class="bookings-table">
+            <caption>
+              Our bookings:
+            </caption>
+            <tr class="header-row">
+              <th class="table-cell header-cell">Arrival</th>
+              <th class="table-cell header-cell">Departure</th>
+              <th class="table-cell header-cell">Guests</th>
+              <th class="table-cell header-cell">Pets</th>
+              <th class="table-cell header-cell">E-mail</th>
+              <th class="table-cell header-cell">Name</th>
+              <th class="table-cell header-cell">Surname</th>
+              <th class="table-cell header-cell"></th>
+            </tr>
+            <tbody class="table-body">
+              <tr class="data-row">
+                <td class="table-cell data-cell" data-cell="arrival">
+                  22-04-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="departure">
+                  25-04-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="guests">2</td>
+                <td class="table-cell data-cell" data-cell="pets">0</td>
+                <td class="table-cell data-cell" data-cell="e-mail">
+                  jhon111@gmail.com
+                </td>
+                <td class="table-cell data-cell" data-cell="name">Jhon</td>
+                <td class="table-cell data-cell" data-cell="surname">
+                  Cowalsky
+                </td>
+                <td class="table-cell data-cell" data-cell="button">
+                  <button class="delete-booking">Delete</button>
+                </td>
+              </tr>
+              <tr class="data-row">
+                <td class="table-cell data-cell" data-cell="arrival">
+                  25-04-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="departure">
+                  30-04-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="guests">2</td>
+                <td class="table-cell data-cell" data-cell="pets">1</td>
+                <td class="table-cell data-cell" data-cell="e-mail">
+                  ktoby@mapquest.com
+                </td>
+                <td class="table-cell data-cell" data-cell="name">Toby</td>
+                <td class="table-cell data-cell" data-cell="surname">
+                  Kimberley
+                </td>
+                <td class="table-cell data-cell" data-cell="button">
+                  <button class="delete-booking">Delete</button>
+                </td>
+              </tr>
+              <tr class="data-row">
+                <td class="table-cell data-cell" data-cell="arrival">
+                  01-00-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="departure">
+                  10-05-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="guests">4</td>
+                <td class="table-cell data-cell" data-cell="pets">0</td>
+                <td class="table-cell data-cell" data-cell="e-mail">
+                  tpegrum1@ucsd.eu
+                </td>
+                <td class="table-cell data-cell" data-cell="name">Tabbie</td>
+                <td class="table-cell data-cell" data-cell="surname">Pegrum</td>
+                <td class="table-cell data-cell" data-cell="button">
+                  <button class="delete-booking">Delete</button>
+                </td>
+              </tr>
+              <tr class="data-row">
+                <td class="table-cell data-cell" data-cell="arrival">
+                  12-05-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="departure">
+                  14-05-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="guests">1</td>
+                <td class="table-cell data-cell" data-cell="pets">1</td>
+                <td class="table-cell data-cell" data-cell="e-mail">
+                  jingledield2@gizmodo.com
+                </td>
+                <td class="table-cell data-cell" data-cell="name">Jeralee</td>
+                <td class="table-cell data-cell" data-cell="surname">
+                  Inglefield
+                </td>
+                <td class="table-cell data-cell" data-cell="button">
+                  <button class="delete-booking">Delete</button>
+                </td>
+              </tr>
+              <tr class="data-row">
+                <td class="table-cell data-cell" data-cell="arrival">
+                  20-05-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="departure">
+                  25-05-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="guests">3</td>
+                <td class="table-cell data-cell" data-cell="pets">2</td>
+                <td class="table-cell data-cell" data-cell="e-mail">
+                  ajarritt@123-reg.co.uk
+                </td>
+                <td class="table-cell data-cell" data-cell="name">Allistir</td>
+                <td class="table-cell data-cell" data-cell="surname">
+                  Jarritt
+                </td>
+                <td class="table-cell data-cell" data-cell="button">
+                  <button class="delete-booking">Delete</button>
+                </td>
+              </tr>
+              <tr class="data-row">
+                <td class="table-cell data-cell" data-cell="arrival">
+                  28-05-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="departure">
+                  30-05-2023
+                </td>
+                <td class="table-cell data-cell" data-cell="guests">2</td>
+                <td class="table-cell data-cell" data-cell="pets">2</td>
+                <td class="table-cell data-cell" data-cell="e-mail">
+                  wwallbrook5@sbwire.com
+                </td>
+                <td class="table-cell data-cell" data-cell="name">Willi</td>
+                <td class="table-cell data-cell" data-cell="surname">
+                  Wallbrook
+                </td>
+                <td class="table-cell data-cell" data-cell="button">
+                  <button class="delete-booking">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/da95deaf60.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/javaScript/bookingPage.js"></script>
+  </body>
+</html>

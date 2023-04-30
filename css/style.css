@@ -8,9 +8,9 @@
   --decoration-font: "Parisienne", cursive;
 }
 
-/* body{
-  overflow: hidden;
-} */
+body{
+  overflow: visible;
+} 
 
 html {
   scroll-behavior: smooth;
@@ -32,13 +32,20 @@ html {
 }
 
 .navigation {
-  max-width: 1600px;
-  margin: 0 10% 0 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* max-width: 1600px; */
+  
+  padding-inline: 10%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   text-align: center;
 }
+
 
 .menu-section {
   display: flex;
@@ -81,22 +88,22 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("backgroundimage.png");
+  background-image: url("backgroundMenu.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #dac28e;
   z-index: 3;
   margin: auto;
-  transition: 1.2s;
+  transition: 2s;
   display: none;
+  justify-content: center;
 }
 
-.list {
-  margin-top: 5em;
+.list {  
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 3em;
   line-height: 1.2em;
@@ -129,7 +136,7 @@ html {
   z-index: -1;
   width: 100%;
   height: 100vh;
-  font-size: 20em;
+  font-size: 18em;
   text-transform: uppercase;
   opacity: 0.1;
   color: black;
@@ -142,6 +149,10 @@ html {
   }
   #selected-item {
     display: none;
+  }
+
+  .menu {
+    font-size: 10px;
   }
 }
 
@@ -171,7 +182,7 @@ html {
   flex-direction: column;
   align-items: center;
   font-size: 2em;
-  margin-top: 7rem;
+  margin-top: 15%;
   text-transform: uppercase;
   user-select: none;
 }
@@ -262,6 +273,16 @@ html {
   margin-top: 1em;
 }
 
+.errorInput{
+  border: 2px solid red;  
+}
+
+.error{
+  color: red;
+  font-size: 10px;
+  overflow: visible;  
+}
+
 @media only screen and (max-width: 980px) {
 
   .widgets{
@@ -273,17 +294,18 @@ html {
   }
 
   .weather-widget{
-    height: auto;
+    /* height: auto;
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     border-radius: 0;
-    margin-bottom: 0.75em;        
+    margin-bottom: 0;         */
+    display: none;
   }
 
   .form {    
     height: auto;
     background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
+    display: none;
     flex-direction: row;
     margin: 0 auto;
     border-radius: 0;
@@ -291,8 +313,16 @@ html {
   }
 
   .list-contact-item {
-    font-size: 0.8em;
+    font-size: 0.7em;
     padding: 0 0.5em;
+  }
+
+  .menu-section{
+    font-size: 10px;
+  }
+
+  .menu{
+    font-size: 20px;
   }
 
   .title {
@@ -332,6 +362,7 @@ html {
     gap: 1em;
     list-style: none;
   }
+  
 }
 
 .dateContainer,
@@ -387,6 +418,24 @@ html {
 }
 
 #submit:hover {
+  background-color: #6b94a8;
+}
+
+.show-book{
+  width: 100%;
+  height: 3em;
+  font-size: 1.2em;
+  margin-top: 1em;
+  position: relative;
+  color: white;
+  background-color: #1e3440;
+  border: none;
+  transition: 0.6s;
+  display: none;
+  text-align: center;
+}
+
+.show-book:hover{
   background-color: #6b94a8;
 }
 
@@ -473,7 +522,7 @@ html {
   background-repeat: no-repeat;
   background-color: rgba(black, 0.2);
   margin-left: 10em;
-  height: 50em;
+  height: 100%;
   -webkit-box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
   -moz-box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
   box-shadow: inset 15px 0px 48px -7px rgba(0, 0, 0, 1);
@@ -485,7 +534,7 @@ html {
   font-weight: 800;
   color: rgba(255, 255, 255, 0.25);
   position: relative;
-  top: 20rem;
+  top: 25%;
   right: 6rem;
   line-height: 11rem;
 }
@@ -493,12 +542,13 @@ html {
 .third-screen {
   color: white;
   background-color: black;
-  height: 2em;
+  min-height: 2em;  
   text-align: center;
   font-size: 4em;
   font-family: var(--decoration-font);
   font-weight: lighter;
-  padding-bottom: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 
@@ -506,9 +556,11 @@ html {
 .photo-text-four {
   text-align: end;
   position: relative;
-  top: 20rem;
+  top: 25%;
   left: 6rem;
 }
+
+
 
 .left-four {
   background-image: url(./iamgeSectionFour.png);
@@ -517,10 +569,10 @@ html {
   background-repeat: no-repeat;
   background-color: rgba(black, 0.2);
   margin-left: 10em;
-  height: 50em;
-  -webkit-box-shadow: inset 48px 0px 15px -7px rgba(0, 0, 0, 1);
-  -moz-box-shadow: inset 48px 0px 15px -7px rgba(0, 0, 0, 1);
-  box-shadow: inset 48px 0px 15px -7px rgba(0, 0, 0, 1);
+  height: 100%; 
+  -webkit-box-shadow: inset -15px 0px 48px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset -15px 0px 48px -7px rgba(0, 0, 0, 1);
+  box-shadow: inset -15px 0px 48px -7px rgba(0, 0, 0, 1);
 }
 
 .right-four{
@@ -539,18 +591,26 @@ html {
   display: flex;
   justify-content: center;
   background-color: black;
-  padding: 0 2em 5em 2em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {
   .second-screen,
   .four-screen {
     height: 100%;
   }
 
-
+  .show-book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  }
 
   .spacer {
     height: 1px;
@@ -585,7 +645,7 @@ html {
   .right-four {
     width: 100%;
     margin: 0 auto;
-    padding: 5em 2em;
+    padding: 5em 2em 0 2em;
   }
 
   .third-screen {
@@ -593,16 +653,179 @@ html {
   }
 
   .fithf-screen {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    padding-bottom: 0;   
+    display: none;
   }
 
   .videoWrapper{
+    display: none;    
+  }
+
+  .scroll-down{
     display: none;
   }
   
+}
+
+.sixth-screen{
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: #6b94a8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--main-font);
+}
+
+.contact-form{
+  min-width: 800px;
+  margin-bottom: 3em;
+  padding-top: 2em;  
+  padding-right: 3em;
+  background-color: black; 
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.contact-form-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-title{
+  text-align: center;
+  font-size: 2.5em;  
+  padding-bottom: 1em;
+}
+
+.contact-inputs{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;  
+}
+
+.contact-inputs input{
+  background-color: white;
+  color: #1e3440;
+  border: none;
+  margin-bottom: 1em;
+  padding-inline: 0.5em;
+}
+
+.contact-inputs input::placeholder{
+  color: #1e3440;
+  opacity: 1;
+}
+
+.contact-name, .contact-email{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;  
+}
+
+.contact-msg{
+  width: 100%;
+  min-height: 10em;
+  font-size: 20px;
+  padding: 0.5em;
+  background-color: white;
+  color: #1e3440;
+}
+
+.contact-msg::placeholder{
+  color: #1e3440;
+  opacity: 1;
+}
+
+#submit-contact{  
+  margin-top: 1em;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  width: 7em;
+  margin-right: 0;
+  margin-left: 0;
+  transition: 0.6s;
+  color: white;
+  background-color: #1e3440;
+  border: none;  
+}
+
+#submit-contact:hover {
+  background-color: white;
+  color: #1e3440;
+}
+
+.map-responsive{
+  padding-left: 3em;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+
+}
+
+
+
+@media only screen and (max-width: 650px) {
+ 
+  .contact-form{
+    min-width: 300px;    
+    overflow: hidden;
+    justify-content: flex-start;    
+  }
+
+  .contact-form-form{
+    align-items: flex-start;
+  }
+
+  .contact-name, .contact-email{
+    font-size: 12px;
+  }
+
+  .contact-msg{
+    min-height: 10em;
+    font-size: 12px;
+  }
+
+  .location{
+    padding: 1em;
+    width: 350px;
+    justify-self: center;
+  }
+
+  .map-responsive{
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  
+  .map-responsive iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 1500px){
+  .sixth-screen{    
+    flex-direction: column;
+  }
+
+  .map-responsive{
+    padding-bottom: 3em;
+    padding-left: 0;
+    justify-content: center;    
+  }
+
+  .contact-form{
+    padding-right: 0;
+    justify-content: center;
+  }
 }

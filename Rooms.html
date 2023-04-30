@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rooms</title>
+    <link rel="stylesheet" href="css/rooms.css" />
+  </head>
+  <body>
+    <section class="main-page">
+      <div class="main-container">
+        <nav class="navigation">
+          <div class="menu-section" id="menu-show">
+            <div class="menu">Menu</div>
+            <div class="button-three" aria-expanded="false">
+              <svg
+                stroke="var(--button-color)"
+                fill="none"
+                class="hamburger"
+                viewBox="-10 -10 120 120"
+                width="85"
+              >
+                <path
+                  class="line"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="links">
+            <ul class="list-contact">
+              <li class="list-contact-item">
+                <a href="#" class="list-contact-link"
+                  ><i class="fa-sharp fa-solid fa-phone-flip fa-xl"></i
+                ></a>
+              </li>
+              <li class="list-contact-item">
+                <a href="#contact-form-div" class="list-contact-link"
+                  ><i class="fa-solid fa-envelope fa-xl"></i
+                ></a>
+              </li>
+              <li class="list-contact-item">
+                <a href="#" class="list-contact-link"
+                  ><i class="fa-brands fa-instagram fa-xl"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div id="navigation-menu">
+          <ul class="list">
+            <li class="list-item" id="1">
+              <a href="index.html" class="list-link">Home</a>
+            </li>
+            <li class="list-item" id="2">
+              <a href="AboutUs.html" class="list-link">About us</a>
+            </li>
+            <li class="list-item" id="3">
+              <a href="#" class="list-link">Hostel</a>
+            </li>
+            <li class="list-item" id="4">
+              <a href="#" class="list-link">Rooms</a>
+            </li>
+            <li class="list-item" id="5">
+              <a href="#" class="list-link">Charities</a>
+            </li>
+            <li class="list-item" id="6">
+              <a href="#" class="list-link">Location</a>
+            </li>
+            <li class="list-item" id="7">
+              <a href="#" class="list-link">Contact</a>
+            </li>
+          </ul>
+          <div id="selected-item"></div>
+        </div>
+        <div class="half half-text">
+          <div class="title">
+            <p class="quote">
+              Book your <br /><span class="decoration-text">favourite</span>
+            </p>
+            <p class="quote">
+              Room with <br /><span class="decoration-text change">Us</span>
+            </p>
+          </div>
+        </div>
+        <div class="half half-image"></div>
+      </div>
+      <div class="scroll-down">
+        <a id="scroll-to" href="#scroll-to-second"
+          ><p>Check our rooms</p>
+          <i class="fa-solid fa-chevron-down fa-lg"></i
+        ></a>
+      </div>
+    </section>
+
+    <section id="scroll-to-second" class="section-second">
+      <div class="half room-category">
+        <div class="category-container">
+          <h2>Shared Rooms</h2>
+          <div class="spacer"></div>
+        </div>
+        <p class="room-category-description">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          excepturi!
+        </p>
+      </div>
+      <div class="half room-description">
+        <!-- Room 1 -->
+        <div class="room-description-wrapper">
+          <div class="room-number"><p>1</p></div>
+          <div class="room-photo room-one"></div>
+          <div class="room-info">
+            <div class="room-name"><h3>Pet friendly room</h3></div>
+            <div class="room-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sed
+              consectetur atque facilis ipsam possimus, repellat cum maiores
+              mollitia quas.
+            </div>
+            <div class="room-icons">
+              <div class="icon icon1">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="icon icon2"><i class="fa-solid fa-paw"></i></div>
+              <div class="icon icon3">
+                <i class="fa-solid fa-kitchen-set"></i>
+              </div>
+            </div>
+            <div class="room-price-booking">
+              <div class="room-price">230$</div>
+              <a href="BookingPage.html">
+                <button class="book-this-room">Book now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-description-wrapper">
+          <div class="room-number"><p>2</p></div>
+          <div class="room-photo room-two"></div>
+          <div class="room-info">
+            <div class="room-name"><h3>Shared room</h3></div>
+            <div class="room-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sed
+              consectetur atque facilis ipsam possimus, repellat cum maiores
+              mollitia quas.
+            </div>
+            <div class="room-icons">
+              <div class="icon icon1">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="icon icon2"><i class="fa-solid fa-paw"></i></div>
+              <div class="icon icon3">
+                <i class="fa-solid fa-kitchen-set"></i>
+              </div>
+            </div>
+            <div class="room-price-booking">
+              <div class="room-price">180$</div>
+              <a href="BookingPage.html">
+                <button class="book-this-room">Book now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-description-wrapper">
+          <div class="room-number"><p>3</p></div>
+          <div class="room-photo room-three"></div>
+          <div class="room-info">
+            <div class="room-name"><h3>Shared room with bathroom</h3></div>
+            <div class="room-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sed
+              consectetur atque facilis ipsam possimus, repellat cum maiores
+              mollitia quas.
+            </div>
+            <div class="room-icons">
+              <div class="icon icon1">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="icon icon2"><i class="fa-solid fa-paw"></i></div>
+              <div class="icon icon3">
+                <i class="fa-solid fa-kitchen-set"></i>
+              </div>
+            </div>
+            <div class="room-price-booking">
+              <div class="room-price">200$</div>
+              <a href="BookingPage.html">
+                <button class="book-this-room">Book now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-three">
+      <div class="half room-category">
+        <div class="category-container">
+          <h2>Private Rooms</h2>
+          <div class="spacer"></div>
+        </div>
+        <p class="room-category-description">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          excepturi!
+        </p>
+      </div>
+      <div class="half room-description">
+        <!-- Room 1 -->
+        <div class="room-description-wrapper">
+          <div class="room-number"><p>1</p></div>
+          <div class="room-photo room-one"></div>
+          <div class="room-info">
+            <div class="room-name"><h3>Pet friendly private room</h3></div>
+            <div class="room-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sed
+              consectetur atque facilis ipsam possimus, repellat cum maiores
+              mollitia quas.
+            </div>
+            <div class="room-icons">
+              <div class="icon icon1">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="icon icon2"><i class="fa-solid fa-paw"></i></div>
+              <div class="icon icon3">
+                <i class="fa-solid fa-kitchen-set"></i>
+              </div>
+            </div>
+            <div class="room-price-booking">
+              <div class="room-price">230$</div>
+              <a href="BookingPage.html">
+                <button class="book-this-room">Book now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-description-wrapper">
+          <div class="room-number"><p>2</p></div>
+          <div class="room-photo room-two"></div>
+          <div class="room-info">
+            <div class="room-name"><h3>Two people room</h3></div>
+            <div class="room-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sed
+              consectetur atque facilis ipsam possimus, repellat cum maiores
+              mollitia quas.
+            </div>
+            <div class="room-icons">
+              <div class="icon icon1">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="icon icon2"><i class="fa-solid fa-paw"></i></div>
+              <div class="icon icon3">
+                <i class="fa-solid fa-kitchen-set"></i>
+              </div>
+            </div>
+            <div class="room-price-booking">
+              <div class="room-price">180$</div>
+              <a href="BookingPage.html">
+                <button class="book-this-room">Book now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-description-wrapper">
+          <div class="room-number"><p>3</p></div>
+          <div class="room-photo room-three"></div>
+          <div class="room-info">
+            <div class="room-name"><h3>Three people room</h3></div>
+            <div class="room-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sed
+              consectetur atque facilis ipsam possimus, repellat cum maiores
+              mollitia quas.
+            </div>
+            <div class="room-icons">
+              <div class="icon icon1">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="icon icon2"><i class="fa-solid fa-paw"></i></div>
+              <div class="icon icon3">
+                <i class="fa-solid fa-kitchen-set"></i>
+              </div>
+            </div>
+            <div class="room-price-booking">
+              <div class="room-price">200$</div>
+              <a href="BookingPage.html">
+                <button class="book-this-room">Book now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/da95deaf60.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/javaScript/index.js"></script>    
+  </body>
+</html>
